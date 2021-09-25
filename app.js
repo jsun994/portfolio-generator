@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
-//const fs = require('fs');
-//const generatePage = require('./src/page-template.js');
+const fs = require('fs');
+const generatePage = require('./src/page-template.js');
 
 //const pageHTML = generatePage(name, github);
 
@@ -59,14 +59,17 @@ const promptUser = () => {
 };
 
 const promptProject = portfolioData => {
+
     if (!portfolioData.projects) {
         portfolioData.projects = [];
     }
+
     console.log(`
     =================
     Add a New Project
     =================
     `);
+
     return inquirer.prompt([
         {
             type: 'input',
@@ -142,3 +145,4 @@ promptUser()
     .then(portfolioData => {
         console.log(portfolioData);
     });
+    
