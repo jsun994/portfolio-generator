@@ -32,7 +32,7 @@ const generateProjects = projectsArr => {
                 `;
             })
             .join('')}
-    
+            //non feature
             ${projectsArr
                 .filter(({ feature }) => !feature)
                 .map(({ name, description, languages, link }) => {
