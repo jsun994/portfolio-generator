@@ -1,4 +1,4 @@
-const { writeFile, copyFile } = require('./utils/generate-site.js');
+const fs = require('fs');
 
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
