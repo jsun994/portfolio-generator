@@ -58,7 +58,6 @@ const promptProject = portfolioData => {
     Add a New Project
     =================
     `);
-
     if (!portfolioData.projects) {
         portfolioData.projects = [];
     }
@@ -127,6 +126,7 @@ const promptProject = portfolioData => {
         if (projectData.confirmAddProject) {
             return promptProject(portfolioData);
         } else {
+            console.log(portfolioData);
             return portfolioData;
         }
     });
