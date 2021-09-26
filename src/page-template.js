@@ -2,7 +2,6 @@ const generateAbout = aboutText => {
     if (!aboutText) {
         return '';
     }
-
     return `
         <section class="my-3" id="about">
             <h2 class="text-dark bg-primary p-2 display-inline-block">About Me</h2>
@@ -47,8 +46,8 @@ const generateProjects = projectsArr => {
                     <a href="${link}" class="btn mt-auto"><i class="fab fa-github mr-2"></i>View Project on GitHub</a>
                 </div>
                 `;
-                })
-                .join('')}
+            })
+            .join('')}
         </div>
         </section>
     `;
